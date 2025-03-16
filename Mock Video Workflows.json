@@ -1,0 +1,2429 @@
+{
+  "last_node_id": 174,
+  "last_link_id": 170,
+  "nodes": [
+    {
+      "id": 53,
+      "type": "CoreVideoMocks:AV1Codec",
+      "pos": [
+        536.4476928710938,
+        4111.37451171875
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "codec",
+          "type": "DICT",
+          "links": [
+            80
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:AV1Codec"
+      },
+      "widgets_values": [
+        32
+      ]
+    },
+    {
+      "id": 60,
+      "type": "CoreVideoMocks:SaveVideo",
+      "pos": [
+        2530.649658203125,
+        3910.4072265625
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 81
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:SaveVideo"
+      },
+      "widgets_values": [
+        "",
+        "video_output"
+      ]
+    },
+    {
+      "id": 62,
+      "type": "CoreVideoMocks:PreviewVideo",
+      "pos": [
+        2538.579345703125,
+        4035.7255859375
+      ],
+      "size": [
+        303.89581298828125,
+        58
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 82
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:PreviewVideo"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 59,
+      "type": "CoreVideoMocks:CombineVideo",
+      "pos": [
+        2148.925537109375,
+        3911.70458984375
+      ],
+      "size": [
+        315,
+        170
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 157
+        },
+        {
+          "name": "audio_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "audio_stream"
+          },
+          "link": 78
+        },
+        {
+          "name": "subtitle_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "subtitle_stream"
+          },
+          "link": 79
+        }
+      ],
+      "outputs": [
+        {
+          "name": "combined_video",
+          "type": "STRING",
+          "links": [
+            81,
+            82
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:CombineVideo"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        "webm"
+      ]
+    },
+    {
+      "id": 49,
+      "type": "CoreVideoMocks:DecodeVideoStream",
+      "pos": [
+        536.1547241210938,
+        3791.318603515625
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "stream",
+          "type": "STRING",
+          "widget": {
+            "name": "stream"
+          },
+          "link": 70
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            73,
+            74
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:DecodeVideoStream"
+      },
+      "widgets_values": [
+        "",
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": 68,
+      "type": "CoreVideoMocks:SplitVideo",
+      "pos": [
+        -413.5736389160156,
+        4006.77783203125
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "STRING",
+          "widget": {
+            "name": "video"
+          },
+          "link": 98
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_streams",
+          "type": "STRING",
+          "links": [
+            94,
+            95
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "audio_streams",
+          "type": "STRING",
+          "links": [
+            96
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "subtitle_streams",
+          "type": "STRING",
+          "links": [
+            97
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:SplitVideo"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 44,
+      "type": "CoreVideoMocks:GetAudioStream",
+      "pos": [
+        42.9619140625,
+        4010.306640625
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "streams",
+          "type": "STRING",
+          "widget": {
+            "name": "streams"
+          },
+          "link": 96
+        }
+      ],
+      "outputs": [
+        {
+          "name": "stream",
+          "type": "STRING",
+          "links": [
+            78
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:GetAudioStream"
+      },
+      "widgets_values": [
+        "",
+        0
+      ]
+    },
+    {
+      "id": 45,
+      "type": "CoreVideoMocks:GetSubtitleStream",
+      "pos": [
+        42.9619140625,
+        4160.306640625
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "streams",
+          "type": "STRING",
+          "widget": {
+            "name": "streams"
+          },
+          "link": 97
+        }
+      ],
+      "outputs": [
+        {
+          "name": "stream",
+          "type": "STRING",
+          "links": [
+            79
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:GetSubtitleStream"
+      },
+      "widgets_values": [
+        "",
+        0
+      ]
+    },
+    {
+      "id": 43,
+      "type": "CoreVideoMocks:GetVideoStream",
+      "pos": [
+        42.9619140625,
+        3860.306640625
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "streams",
+          "type": "STRING",
+          "widget": {
+            "name": "streams"
+          },
+          "link": 95
+        }
+      ],
+      "outputs": [
+        {
+          "name": "stream",
+          "type": "STRING",
+          "links": [
+            70
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:GetVideoStream"
+      },
+      "widgets_values": [
+        "",
+        0
+      ]
+    },
+    {
+      "id": 64,
+      "type": "CoreVideoMocks:GetVideoStream",
+      "pos": [
+        38.54098892211914,
+        3734.729248046875
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "streams",
+          "type": "STRING",
+          "widget": {
+            "name": "streams"
+          },
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "stream",
+          "type": "STRING",
+          "links": [
+            85,
+            89,
+            100
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:GetVideoStream"
+      },
+      "widgets_values": [
+        "",
+        1
+      ]
+    },
+    {
+      "id": 69,
+      "type": "CoreVideoMocks:LoadVideo",
+      "pos": [
+        -808.8560180664062,
+        4070.97509765625
+      ],
+      "size": [
+        315,
+        284
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "STRING",
+          "links": [
+            98
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:LoadVideo"
+      },
+      "widgets_values": [
+        "AnimateDiff_00037.webm",
+        "image",
+        ""
+      ]
+    },
+    {
+      "id": 67,
+      "type": "CoreVideoMocks:DecodeVideoStream",
+      "pos": [
+        545.6210327148438,
+        3313.753173828125
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "stream",
+          "type": "STRING",
+          "widget": {
+            "name": "stream"
+          },
+          "link": 89
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            104
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:DecodeVideoStream"
+      },
+      "widgets_values": [
+        "",
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": 73,
+      "type": "CoreVideoMocks:VideoStreamData",
+      "pos": [
+        545.3915405273438,
+        3481.6728515625
+      ],
+      "size": [
+        315,
+        138
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 100
+        }
+      ],
+      "outputs": [
+        {
+          "name": "frames_per_second",
+          "type": "FLOAT",
+          "links": [
+            101
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:VideoStreamData"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 55,
+      "type": "CoreVideoMocks:EncodeVideoStream",
+      "pos": [
+        1084.521240234375,
+        4061.59375
+      ],
+      "size": [
+        225.7595672607422,
+        78
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 73
+        },
+        {
+          "name": "codec",
+          "type": 0,
+          "link": 80
+        }
+      ],
+      "outputs": [
+        {
+          "name": "encoded_stream",
+          "type": "STRING",
+          "links": [
+            76
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:EncodeVideoStream"
+      },
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 50,
+      "type": "CoreVideoMocks:EncodeVideoStream",
+      "pos": [
+        1079.922119140625,
+        3821.080322265625
+      ],
+      "size": [
+        221.81967163085938,
+        78
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 74
+        },
+        {
+          "name": "codec",
+          "type": 0,
+          "link": 72
+        }
+      ],
+      "outputs": [
+        {
+          "name": "encoded_stream",
+          "type": "STRING",
+          "links": [
+            75
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:EncodeVideoStream"
+      },
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 54,
+      "type": "CoreVideoMocks:VP9Codec",
+      "pos": [
+        536.4467163085938,
+        3983.49462890625
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "codec",
+          "type": "DICT",
+          "links": [
+            72
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:VP9Codec"
+      },
+      "widgets_values": [
+        32
+      ]
+    },
+    {
+      "id": 156,
+      "type": "CoreVideoMocks:VP9Codec",
+      "pos": [
+        774.5042724609375,
+        2430.148193359375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "codec",
+          "type": "DICT",
+          "links": [
+            144
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:VP9Codec"
+      },
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 134,
+      "type": "CoreVideoMocks:CombineVideo",
+      "pos": [
+        1417.9541015625,
+        2261.755859375
+      ],
+      "size": [
+        253.60000610351562,
+        170
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 146
+        },
+        {
+          "name": "audio_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "audio_stream"
+          },
+          "link": 147
+        },
+        {
+          "name": "subtitle_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "subtitle_stream"
+          },
+          "link": 148
+        }
+      ],
+      "outputs": [
+        {
+          "name": "combined_video",
+          "type": "STRING",
+          "links": [
+            118
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:CombineVideo"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        "webm"
+      ]
+    },
+    {
+      "id": 137,
+      "type": "CoreVideoMocks:SaveVideo",
+      "pos": [
+        1703.3443603515625,
+        2265.613525390625
+      ],
+      "size": [
+        315,
+        82
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 118
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:SaveVideo"
+      },
+      "widgets_values": [
+        "",
+        "video_output"
+      ]
+    },
+    {
+      "id": 146,
+      "type": "CoreVideoMocks:DecodeVideoStream",
+      "pos": [
+        144.51390075683594,
+        2253.7880859375
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "stream",
+          "type": "STRING",
+          "widget": {
+            "name": "stream"
+          },
+          "link": 138
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            151
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:DecodeVideoStream"
+      },
+      "widgets_values": [
+        "",
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": 157,
+      "type": "ImageInvert",
+      "pos": [
+        520.3916625976562,
+        2253.694580078125
+      ],
+      "size": [
+        210,
+        26
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 151
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            152
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 152,
+      "type": "BatchUtils:BatchSelection",
+      "pos": [
+        -132.10940551757812,
+        2265.58447265625
+      ],
+      "size": [
+        210,
+        102
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "batch",
+          "type": "STRING",
+          "widget": {
+            "name": "batch"
+          },
+          "link": 136
+        },
+        {
+          "name": "selector",
+          "type": "STRING",
+          "widget": {
+            "name": "selector"
+          },
+          "link": 137
+        }
+      ],
+      "outputs": [
+        {
+          "name": "new_batch",
+          "type": "STRING",
+          "links": [
+            138,
+            153
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchUtils:BatchSelection"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 158,
+      "type": "CoreVideoMocks:VideoStreamData",
+      "pos": [
+        154.0984649658203,
+        2436.83935546875
+      ],
+      "size": [
+        302.0211181640625,
+        138
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 153
+        }
+      ],
+      "outputs": [
+        {
+          "name": "frames_per_second",
+          "type": "FLOAT",
+          "links": [
+            154
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "frame_count",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "duration",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:VideoStreamData"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 155,
+      "type": "CoreVideoMocks:EncodeVideoStream",
+      "pos": [
+        1024.04296875,
+        2254.2177734375
+      ],
+      "size": [
+        270.3999938964844,
+        98
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 152
+        },
+        {
+          "name": "codec",
+          "type": 0,
+          "link": 144
+        },
+        {
+          "name": "frames_per_second",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frames_per_second"
+          },
+          "link": 154
+        }
+      ],
+      "outputs": [
+        {
+          "name": "encoded_stream",
+          "type": "STRING",
+          "links": [
+            146
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:EncodeVideoStream"
+      },
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 119,
+      "type": "CoreVideoMocks:LoadVideo",
+      "pos": [
+        -801.8258056640625,
+        2331.34423828125
+      ],
+      "size": [
+        315,
+        284
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "STRING",
+          "links": [
+            131
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:LoadVideo"
+      },
+      "widgets_values": [
+        "AnimateDiff_00037.webm",
+        "image",
+        ""
+      ]
+    },
+    {
+      "id": 153,
+      "type": "BatchUtils:BatchSelection",
+      "pos": [
+        -130.6398468017578,
+        2420.532958984375
+      ],
+      "size": [
+        210,
+        102
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "batch",
+          "type": "STRING",
+          "widget": {
+            "name": "batch"
+          },
+          "link": 150
+        },
+        {
+          "name": "selector",
+          "type": "STRING",
+          "widget": {
+            "name": "selector"
+          },
+          "link": 139
+        }
+      ],
+      "outputs": [
+        {
+          "name": "new_batch",
+          "type": "STRING",
+          "links": [
+            147
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchUtils:BatchSelection"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 63,
+      "type": "CoreVideoMocks:CodecFromVideoStream",
+      "pos": [
+        545.1283569335938,
+        3657.417724609375
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "codec",
+          "type": "STRING",
+          "links": [
+            103
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:CodecFromVideoStream"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 56,
+      "type": "CoreVideoMocks:BatchVideoStreams",
+      "pos": [
+        1368.0257568359375,
+        3895.841796875
+      ],
+      "size": [
+        304,
+        102
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream_1",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream_1"
+          },
+          "link": 75
+        },
+        {
+          "name": "video_stream_2",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream_2"
+          },
+          "link": 76
+        }
+      ],
+      "outputs": [
+        {
+          "name": "batched_video_streams",
+          "type": "STRING",
+          "links": [
+            155
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:BatchVideoStreams"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 75,
+      "type": "CoreVideoMocks:EncodeVideoStream",
+      "pos": [
+        942.6524658203125,
+        3312.248046875
+      ],
+      "size": [
+        315,
+        98
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 104
+        },
+        {
+          "name": "codec",
+          "type": 0,
+          "link": 103
+        },
+        {
+          "name": "frames_per_second",
+          "type": "FLOAT",
+          "widget": {
+            "name": "frames_per_second"
+          },
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "name": "encoded_stream",
+          "type": "STRING",
+          "links": [
+            156
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:EncodeVideoStream"
+      },
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 159,
+      "type": "BatchUtils:MakeBatch",
+      "pos": [
+        1749.3970947265625,
+        3742.181396484375
+      ],
+      "size": [
+        315,
+        126
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "batch_1",
+          "type": "STRING",
+          "widget": {
+            "name": "batch_1"
+          },
+          "link": 156
+        },
+        {
+          "name": "batch_2",
+          "type": "STRING",
+          "widget": {
+            "name": "batch_2"
+          },
+          "link": 155
+        }
+      ],
+      "outputs": [
+        {
+          "name": "combined_batch",
+          "type": "STRING",
+          "links": [
+            157
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchUtils:MakeBatch"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "concatenate"
+      ]
+    },
+    {
+      "id": 166,
+      "type": "CoreVideoMocks:EncodeVideoStream",
+      "pos": [
+        598.2575073242188,
+        2866.6572265625
+      ],
+      "size": [
+        258.4818115234375,
+        78
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 162
+        },
+        {
+          "name": "codec",
+          "type": 0,
+          "link": 169
+        }
+      ],
+      "outputs": [
+        {
+          "name": "encoded_stream",
+          "type": "STRING",
+          "links": [
+            166
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:EncodeVideoStream"
+      },
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 170,
+      "type": "CoreVideoMocks:SaveVideo",
+      "pos": [
+        1264.784423828125,
+        2850.367431640625
+      ],
+      "size": [
+        297.9570007324219,
+        82
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 167
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:SaveVideo"
+      },
+      "widgets_values": [
+        "",
+        "video_output"
+      ]
+    },
+    {
+      "id": 154,
+      "type": "BatchUtils:BatchSelection",
+      "pos": [
+        -125.50272369384766,
+        2574.5771484375
+      ],
+      "size": [
+        210,
+        102
+      ],
+      "flags": {
+        "collapsed": false
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "batch",
+          "type": "STRING",
+          "widget": {
+            "name": "batch"
+          },
+          "link": 142
+        },
+        {
+          "name": "selector",
+          "type": "STRING",
+          "widget": {
+            "name": "selector"
+          },
+          "link": 170
+        }
+      ],
+      "outputs": [
+        {
+          "name": "new_batch",
+          "type": "STRING",
+          "links": [
+            148
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchUtils:BatchSelection"
+      },
+      "widgets_values": [
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 138,
+      "type": "CoreVideoMocks:SplitVideo",
+      "pos": [
+        -425.7732238769531,
+        2270.830078125
+      ],
+      "size": [
+        210,
+        98
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "STRING",
+          "widget": {
+            "name": "video"
+          },
+          "link": 131
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_streams",
+          "type": "STRING",
+          "links": [
+            136
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "audio_streams",
+          "type": "STRING",
+          "links": [
+            150
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "subtitle_streams",
+          "type": "STRING",
+          "links": [
+            142
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:SplitVideo"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 160,
+      "type": "BatchUtils:SliceBatchOperation",
+      "pos": [
+        -415.1880798339844,
+        2466.8271484375
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "selector",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchUtils:SliceBatchOperation"
+      },
+      "widgets_values": [
+        0,
+        -1
+      ]
+    },
+    {
+      "id": 150,
+      "type": "BatchUtils:AtIndexBatchOperation",
+      "pos": [
+        -403.4977111816406,
+        2599.861328125
+      ],
+      "size": [
+        210,
+        82
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "selector",
+          "type": "STRING",
+          "links": [
+            137,
+            139,
+            170
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BatchUtils:AtIndexBatchOperation"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 162,
+      "type": "CoreVideoMocks:LoadVideo",
+      "pos": [
+        -790.472412109375,
+        2868.745849609375
+      ],
+      "size": [
+        315,
+        284
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "STRING",
+          "links": [
+            158
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:LoadVideo"
+      },
+      "widgets_values": [
+        "AnimateDiff_00037.webm",
+        "image",
+        ""
+      ]
+    },
+    {
+      "id": 164,
+      "type": "CoreVideoMocks:DecodeVideoStream",
+      "pos": [
+        -140.41958618164062,
+        2867.307861328125
+      ],
+      "size": [
+        315,
+        130
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "stream",
+          "type": "STRING",
+          "widget": {
+            "name": "stream"
+          },
+          "link": 159
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            161
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:DecodeVideoStream"
+      },
+      "widgets_values": [
+        "",
+        1,
+        0,
+        -1
+      ]
+    },
+    {
+      "id": 163,
+      "type": "CoreVideoMocks:SplitVideo",
+      "pos": [
+        -419.2532043457031,
+        2887.603515625
+      ],
+      "size": [
+        210,
+        98
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "STRING",
+          "widget": {
+            "name": "video"
+          },
+          "link": 158
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video_streams",
+          "type": "STRING",
+          "links": [
+            159
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "audio_streams",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 1
+        },
+        {
+          "name": "subtitle_streams",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:SplitVideo"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 165,
+      "type": "ImageInvert",
+      "pos": [
+        275.3096008300781,
+        2867.506591796875
+      ],
+      "size": [
+        210,
+        26
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 161
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            162
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImageInvert"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 172,
+      "type": "CoreVideoMocks:VP9Codec",
+      "pos": [
+        275.4111328125,
+        2962.72802734375
+      ],
+      "size": [
+        210,
+        58
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "codec",
+          "type": "DICT",
+          "links": [
+            169
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:VP9Codec"
+      },
+      "widgets_values": [
+        30
+      ]
+    },
+    {
+      "id": 169,
+      "type": "CoreVideoMocks:CombineVideo",
+      "pos": [
+        936.5635375976562,
+        2848.730712890625
+      ],
+      "size": [
+        253.60000610351562,
+        170
+      ],
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "video_stream"
+          },
+          "link": 166
+        },
+        {
+          "name": "audio_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "audio_stream"
+          },
+          "link": null
+        },
+        {
+          "name": "subtitle_stream",
+          "type": "STRING",
+          "widget": {
+            "name": "subtitle_stream"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "combined_video",
+          "type": "STRING",
+          "links": [
+            167
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CoreVideoMocks:CombineVideo"
+      },
+      "widgets_values": [
+        "",
+        "",
+        "",
+        "webm"
+      ]
+    }
+  ],
+  "links": [
+    [
+      70,
+      43,
+      0,
+      49,
+      0,
+      "STRING"
+    ],
+    [
+      72,
+      54,
+      0,
+      50,
+      1,
+      "DICT"
+    ],
+    [
+      73,
+      49,
+      0,
+      55,
+      0,
+      "IMAGE"
+    ],
+    [
+      74,
+      49,
+      0,
+      50,
+      0,
+      "IMAGE"
+    ],
+    [
+      75,
+      50,
+      0,
+      56,
+      0,
+      "STRING"
+    ],
+    [
+      76,
+      55,
+      0,
+      56,
+      1,
+      "STRING"
+    ],
+    [
+      78,
+      44,
+      0,
+      59,
+      1,
+      "STRING"
+    ],
+    [
+      79,
+      45,
+      0,
+      59,
+      2,
+      "STRING"
+    ],
+    [
+      80,
+      53,
+      0,
+      55,
+      1,
+      "DICT"
+    ],
+    [
+      81,
+      59,
+      0,
+      60,
+      0,
+      "STRING"
+    ],
+    [
+      82,
+      59,
+      0,
+      62,
+      0,
+      "STRING"
+    ],
+    [
+      85,
+      64,
+      0,
+      63,
+      0,
+      "STRING"
+    ],
+    [
+      89,
+      64,
+      0,
+      67,
+      0,
+      "STRING"
+    ],
+    [
+      94,
+      68,
+      0,
+      64,
+      0,
+      "STRING"
+    ],
+    [
+      95,
+      68,
+      0,
+      43,
+      0,
+      "STRING"
+    ],
+    [
+      96,
+      68,
+      1,
+      44,
+      0,
+      "STRING"
+    ],
+    [
+      97,
+      68,
+      2,
+      45,
+      0,
+      "STRING"
+    ],
+    [
+      98,
+      69,
+      0,
+      68,
+      0,
+      "STRING"
+    ],
+    [
+      100,
+      64,
+      0,
+      73,
+      0,
+      "STRING"
+    ],
+    [
+      101,
+      73,
+      0,
+      75,
+      2,
+      "FLOAT"
+    ],
+    [
+      103,
+      63,
+      0,
+      75,
+      1,
+      "STRING"
+    ],
+    [
+      104,
+      67,
+      0,
+      75,
+      0,
+      "IMAGE"
+    ],
+    [
+      118,
+      134,
+      0,
+      137,
+      0,
+      "STRING"
+    ],
+    [
+      131,
+      119,
+      0,
+      138,
+      0,
+      "STRING"
+    ],
+    [
+      136,
+      138,
+      0,
+      152,
+      0,
+      "STRING"
+    ],
+    [
+      137,
+      150,
+      0,
+      152,
+      1,
+      "STRING"
+    ],
+    [
+      138,
+      152,
+      0,
+      146,
+      0,
+      "STRING"
+    ],
+    [
+      139,
+      150,
+      0,
+      153,
+      1,
+      "STRING"
+    ],
+    [
+      142,
+      138,
+      2,
+      154,
+      0,
+      "STRING"
+    ],
+    [
+      144,
+      156,
+      0,
+      155,
+      1,
+      "DICT"
+    ],
+    [
+      146,
+      155,
+      0,
+      134,
+      0,
+      "STRING"
+    ],
+    [
+      147,
+      153,
+      0,
+      134,
+      1,
+      "STRING"
+    ],
+    [
+      148,
+      154,
+      0,
+      134,
+      2,
+      "STRING"
+    ],
+    [
+      150,
+      138,
+      1,
+      153,
+      0,
+      "STRING"
+    ],
+    [
+      151,
+      146,
+      0,
+      157,
+      0,
+      "IMAGE"
+    ],
+    [
+      152,
+      157,
+      0,
+      155,
+      0,
+      "IMAGE"
+    ],
+    [
+      153,
+      152,
+      0,
+      158,
+      0,
+      "STRING"
+    ],
+    [
+      154,
+      158,
+      0,
+      155,
+      2,
+      "FLOAT"
+    ],
+    [
+      155,
+      56,
+      0,
+      159,
+      1,
+      "STRING"
+    ],
+    [
+      156,
+      75,
+      0,
+      159,
+      0,
+      "STRING"
+    ],
+    [
+      157,
+      159,
+      0,
+      59,
+      0,
+      "STRING"
+    ],
+    [
+      158,
+      162,
+      0,
+      163,
+      0,
+      "STRING"
+    ],
+    [
+      159,
+      163,
+      0,
+      164,
+      0,
+      "STRING"
+    ],
+    [
+      161,
+      164,
+      0,
+      165,
+      0,
+      "IMAGE"
+    ],
+    [
+      162,
+      165,
+      0,
+      166,
+      0,
+      "IMAGE"
+    ],
+    [
+      166,
+      166,
+      0,
+      169,
+      0,
+      "STRING"
+    ],
+    [
+      167,
+      169,
+      0,
+      170,
+      0,
+      "STRING"
+    ],
+    [
+      169,
+      172,
+      0,
+      166,
+      1,
+      "DICT"
+    ],
+    [
+      170,
+      150,
+      0,
+      154,
+      1,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 20,
+      "title": "Example Workflow",
+      "bounding": [
+        -821.8258056640625,
+        2136.494384765625,
+        2865.587646484375,
+        582.4405517578125
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 14,
+      "title": "Video Loader",
+      "bounding": [
+        -811.8258056640625,
+        2257.744140625,
+        335,
+        367.6000061035156
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 15,
+      "title": "Stream Manipulation",
+      "bounding": [
+        -435.773193359375,
+        2180.18798828125,
+        905.285400390625,
+        528.7469482421875
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 16,
+      "title": "Save Video",
+      "bounding": [
+        1693.3443603515625,
+        2192.013427734375,
+        335,
+        165.60000610351562
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 17,
+      "title": "Combine Video",
+      "bounding": [
+        1407.9541015625,
+        2188.15576171875,
+        273.5999755859375,
+        253.60000610351562
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 18,
+      "title": "Encode VIdeo",
+      "bounding": [
+        755.7943725585938,
+        2184.106201171875,
+        640.3646240234375,
+        364.0130920410156
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 19,
+      "title": "Do Something",
+      "bounding": [
+        510.3916015625,
+        2180.094482421875,
+        230,
+        109.5999984741211
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 21,
+      "title": "More examples",
+      "bounding": [
+        -818.8560180664062,
+        3238.6484375,
+        3674.510009765625,
+        1294.0921630859375
+      ],
+      "color": "#a1309b",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "id": 22,
+      "title": "Simple Example",
+      "bounding": [
+        -821.1931762695312,
+        2772.91064453125,
+        2410.97705078125,
+        411.2948303222656
+      ],
+      "color": "#b58b2a",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.35584102738369006,
+      "offset": [
+        1150.892642487318,
+        -2002.269741831972
+      ]
+    },
+    "linkExtensions": [
+      {
+        "id": 78,
+        "parentId": 2
+      },
+      {
+        "id": 79,
+        "parentId": 4
+      }
+    ],
+    "reroutes": [
+      {
+        "id": 1,
+        "pos": [
+          600.7608032226562,
+          4270.22802734375
+        ],
+        "linkIds": [
+          78
+        ]
+      },
+      {
+        "id": 2,
+        "parentId": 1,
+        "pos": [
+          1689.5694580078125,
+          4273.171875
+        ],
+        "linkIds": [
+          78
+        ]
+      },
+      {
+        "id": 3,
+        "pos": [
+          598.7590942382812,
+          4315.564453125
+        ],
+        "linkIds": [
+          79
+        ]
+      },
+      {
+        "id": 4,
+        "parentId": 3,
+        "pos": [
+          1692.5709228515625,
+          4316.62548828125
+        ],
+        "linkIds": [
+          79
+        ]
+      }
+    ],
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
