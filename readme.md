@@ -1,5 +1,5 @@
-# ComfyUI Video Core Nodes
-A mock of a possible implementation of for ComfyUI Core video nodes. 
+# ComfyUI Core Video Nodes
+A mock of a possible implementation of for ComfyUI Core Video Nodes. 
 
 # Intended Usage
 ![alt text](wf-picture.png)
