@@ -1,0 +1,14 @@
+[project]
+name = "corevideomocks"
+description = "A mock of a possible implementation of for ComfyUI Core Video Nodes."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/Immac/ComfyUI-CoreVideoMocks"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-CoreVideoMocks"
+Icon = ""
